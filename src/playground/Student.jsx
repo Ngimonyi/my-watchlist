@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 const Student = (props) => {
     const passed = props.jabuka.join(', ');
 
@@ -12,3 +14,10 @@ const Student = (props) => {
 }
 
 export default Student;
+
+Student.propTypes = {
+    fullName: propTypes.string,
+    average: propTypes.number,
+    passed: propTypes.arrayOf(propTypes.string),
+    jmbag: propTypes.number
+}

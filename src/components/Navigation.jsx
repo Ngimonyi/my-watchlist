@@ -1,24 +1,6 @@
+import navList from '../data/navigation.json';
 
 const Navigation = () => {
-    const navList = [
-        {
-            url: "",
-            title: "All movies"
-        },
-        {
-            url: "favorites",
-            title: "Favorites"
-        },
-        {
-            url: "add",
-            title: "Add"
-        },
-        {
-            url: "search",
-            title: "Search"
-        }
-    ]
-
     return (
         <ul>
             {

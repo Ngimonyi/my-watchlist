@@ -1,3 +1,5 @@
+import propTypes from 'prop-types';
+
 const Movie = ({title, image}) => {
 
     return (
@@ -9,3 +11,9 @@ const Movie = ({title, image}) => {
 }
 
 export default Movie
+
+// zadatak - tipizirati(tipovati) propse komponente
+Movie.propTypes = {
+    title: propTypes.string,
+    image: propTypes.string
+}
