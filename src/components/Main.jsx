@@ -6,6 +6,7 @@ const Main = () => {
     const logMessage = () => {
         console.log('Klikćem...');
     }
+    
 
     return(
         <>
