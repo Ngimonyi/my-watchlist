@@ -19,13 +19,13 @@ const Playground = () => {
             fullName: 'Stipe Mesić',
             average: 3.1,
             passed: ['biologija', 'kemija', 'filozofija', 'logika'],
-            jmbag: 74839587385
+            jmbag: 87678687678
         },
         {
             fullName: 'Ivo Andrić',
             average: 2.6,
             passed: ['biologija', 'kemija', 'filozofija', 'logika'],
-            jmbag: 74839587385
+            jmbag: 785678678
         }
     ]
 
@@ -37,7 +37,7 @@ const Playground = () => {
             {
                 students.map((student) => {
                     return (
-                        <>
+                        <div key={student.jmbag}>
                             <Student
                                 fullName={student.fullName}
                                 average={student.average}
@@ -45,7 +45,7 @@ const Playground = () => {
                                 jmbag={student.jmbag}
                             />
                             <br />
-                        </>
+                        </div>
                     )
                 })
             }
