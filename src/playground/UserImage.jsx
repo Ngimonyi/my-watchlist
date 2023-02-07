@@ -1,4 +1,3 @@
-import logo from '../logo.svg'
 
 function AdditionalDesc() {
     return (
@@ -12,7 +11,7 @@ function UserImage() {
     return (
         <div className="img-wrap">
             <figure>
-                <img src={logo} alt="" />
+                <img src="{logo}" alt="" />
                 <figcaption>React logo</figcaption>
             </figure>
             <AdditionalDesc />

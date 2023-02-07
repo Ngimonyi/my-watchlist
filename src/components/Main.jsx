@@ -1,10 +1,29 @@
 import WatchItem from "./WatchItem";
+import movies from '../data/movies.json';
 
 const Main = () => {
+    // event handler
+    const logMessage = () => {
+        console.log('Klikćem...');
+    }
+    
+
     return(
         <>
-            <div>Moj Main</div>
-            <WatchItem />
+            <button onClick={logMessage}>Klikći me!</button>
+
+
+            {
+                movies.map((movie) => {
+                    return (
+                        <WatchItem
+                            movieObject={movie}
+                            director="jbfkjbefjkb"
+                            key={movie.id}
+                        />
+                    )
+                })
+            }
         </>
     )
 }
