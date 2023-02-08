@@ -6,6 +6,7 @@ import UserImage from "./UserImage";
 import ClassSample from "./ClassSample";
 import Person from "./Person";
 import Student from "./Student";
+import ReactStates from "./ReactStates";
 
 const Playground = () => {
     const students = [
@@ -33,6 +34,8 @@ const Playground = () => {
 
     return (
         <>
+
+            <ReactStates />
 
             {
                 students.map((student) => {
