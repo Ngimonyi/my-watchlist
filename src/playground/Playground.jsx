@@ -6,6 +6,7 @@ import UserImage from "./UserImage";
 import ClassSample from "./ClassSample";
 import Person from "./Person";
 import Student from "./Student";
+import Events from "./Events";
 
 const Playground = () => {
     const students = [
@@ -30,9 +31,15 @@ const Playground = () => {
     ]
 
 
+    const introduction = (fullNameString) => {
+        alert('Mein Name ist ' + fullNameString);
+    }
 
     return (
         <>
+            <Events />
+
+            <hr />
 
             {
                 students.map((student) => {
@@ -43,6 +50,7 @@ const Playground = () => {
                                 average={student.average}
                                 jabuka={student.passed}
                                 jmbag={student.jmbag}
+                                introducePerson={introduction}
                             />
                             <br />
                         </div>
@@ -58,6 +66,7 @@ const Playground = () => {
                 birthday={1898}
                 address="Pantovčak 108"
                 parties={["HDZ", "SDP", "Možemo", "Ne možemo"]}
+                introducePerson={introduction}
             />
 
             <Person
