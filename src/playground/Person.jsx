@@ -1,5 +1,7 @@
 const Person = (props) => {
 
+    console.log(props);
+
     return (
         <>
             <div>
@@ -26,6 +28,12 @@ const Person = (props) => {
                     })
                 }
             </div>
+            {/* button klikom na koji se poziva funkcija */}
+            <button
+                onClick={() => props.introducePerson(`${props.name} ${props.surname}`)}
+            >
+                Predstavi se
+            </button>
             <hr />
         </>
     )

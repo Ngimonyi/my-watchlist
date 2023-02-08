@@ -7,11 +7,11 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <hr />
       <Main />
       <hr />
-      <Footer />
+      <Footer /> */}
 
       <hr />
       <Playground />

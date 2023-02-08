@@ -9,6 +9,11 @@ const Student = (props) => {
             <div>Prosjek: {props.average}</div>
             <div>Položeni kolegiji: {passed}</div>
             <div>JMBAG: {props.jmbag}</div>
+            <button
+                onClick={() => props.introducePerson(props.fullName)}
+            >
+                Predstavi se
+            </button>
         </>
     )
 }
