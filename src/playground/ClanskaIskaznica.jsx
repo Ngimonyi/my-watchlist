@@ -20,7 +20,7 @@ const ClanskaIskaznica = () => {
     const [age, setAge] = useState()
 
     return (
-        <>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+        <>
             <input
                 type="text"
                 placeholder='Ime'

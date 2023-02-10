@@ -10,6 +10,7 @@ import ReactStates from "./ReactStates";
 import { useState } from "react";
 import ClanskaIskaznica from "./ClanskaIskaznica";
 import Accordion from "./Accordion";
+import MoviesSearch from "./MoviesSearch";
 
 const Playground = () => {
     const students = [
@@ -38,6 +39,12 @@ const Playground = () => {
 
     return (
         <>
+            <h1>Movies search</h1>
+            <MoviesSearch />
+
+            <br /><br />
+            <hr />
+
             <h1>Accordions</h1>
             <Accordion />
             <Accordion />
