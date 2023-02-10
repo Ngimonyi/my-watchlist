@@ -8,6 +8,8 @@ import Person from "./Person";
 import Student from "./Student";
 import ReactStates from "./ReactStates";
 import { useState } from "react";
+import ClanskaIskaznica from "./ClanskaIskaznica";
+import Accordion from "./Accordion";
 
 const Playground = () => {
     const students = [
@@ -36,6 +38,19 @@ const Playground = () => {
 
     return (
         <>
+            <h1>Accordions</h1>
+            <Accordion />
+            <Accordion />
+            <Accordion />
+            <Accordion />
+
+            <br /> <br />
+            <hr />
+
+            <ClanskaIskaznica />
+
+            <hr />
+
             <img
                 src={currentImage}
                 alt=""
