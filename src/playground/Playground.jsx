@@ -7,6 +7,7 @@ import ClassSample from "./ClassSample";
 import Person from "./Person";
 import Student from "./Student";
 import ReactStates from "./ReactStates";
+import { useState } from "react";
 
 const Playground = () => {
     const students = [
@@ -30,10 +31,19 @@ const Playground = () => {
         }
     ]
 
+    const [currentImage, setCurrentImage] = useState(batman)
 
 
     return (
         <>
+            <img
+                src={currentImage}
+                alt=""
+                onMouseEnter={() => setCurrentImage(superman)}
+                onMouseLeave={() => setCurrentImage(batman)}
+            />
+
+            <hr />
 
             <ReactStates />
 

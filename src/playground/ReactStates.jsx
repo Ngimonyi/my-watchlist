@@ -9,9 +9,32 @@ const ReactStates = () => {
         setNumber(number + 1);
     }
 
+    const [inputNumber, setInputNumber] = useState(0);
+    const [numberSquare, setNumberSquare] = useState(0)
+
+    // 10.02.2023.
+    // napraviti funkcionalnost koja vraća kvadrat upisanog broja
+
+    const squareNumber = (e) => {
+        const value = e.target.value;
+        const valueSquared = value**2;
+
+        setInputNumber(value);
+        setNumberSquare(valueSquared);
+    }
 
     return (
         <>
+            <input type="text" onChange={(e) => {
+                setInputNumber(e.target.value);
+                setNumberSquare(e.target.value ** 2);
+                }
+            } />
+            <h1>Kvadrat broja {inputNumber} je {numberSquare}</h1>
+            <h1>Kub broja {inputNumber} je {inputNumber**3}</h1>
+
+            <hr />
+
             <h1 onMouseOver={() => setOverCounter(overCounter + 1)}>
                 React states
             </h1>
