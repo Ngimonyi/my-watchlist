@@ -11,6 +11,7 @@ import { useState } from "react";
 import ClanskaIskaznica from "./ClanskaIskaznica";
 import Accordion from "./Accordion";
 import MoviesSearch from "./MoviesSearch";
+import MovieGallery from "./MovieGallery";
 
 const Playground = () => {
     const students = [
@@ -39,6 +40,11 @@ const Playground = () => {
 
     return (
         <>
+            <MovieGallery />
+
+            <br /><br />
+            <hr />
+            
             <h1>Movies search</h1>
             <MoviesSearch />
 
