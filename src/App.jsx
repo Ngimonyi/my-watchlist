@@ -3,32 +3,43 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import Landing from './components/Landing';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from 'react-router-dom';
+import Favorites from './components/Favorites';
 
-// Redoslijed stiliziranja
-// header
-// footer
-// Landing
-// watchItem
-// Search, Favorites...
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <Router>
+      <div className="App">
+        <Header />
 
-      <main>
-        <Landing />
-        {/* <Search /> */}
-        {/* <Favorites /> */}        
-      </main>
+        <main>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/favorites" element={<Favorites />} />
+            
+            <Route path="/search" element={<Playground />} />
+          </Routes>
 
-      <hr />
-      <Footer />
 
-      <hr />
-      {/* <Playground /> */}
-      <hr />
-    </div>
+          <Landing />
+          {/* <Search /> */}
+          {/* <Favorites /> */}        
+        </main>
+
+        <hr />
+        <Footer />
+
+        <hr />
+        {/* <Playground /> */}
+        <hr />
+      </div>    
+    </Router>
+
   );
 }
 
