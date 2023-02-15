@@ -3,16 +3,18 @@ import propTypes from 'prop-types';
 import { useState } from 'react';
 
 const WatchItem = ({movieObject, showRating}) => {
-    console.log('movieObject.isFavorite', movieObject.isFavorite);
     const [isFavorite, setIsFavorite] = useState(movieObject.isFavorite);
-
+    
     return (
         <div className="item-wrap">
             <article className='watch-item'>
-                <img
-                    src={movieObject.imagePath}
-                    alt={movieObject.title}
-                />
+                <div className="img-wrap" style={{fontSize: '24px', backgroundImage: `url(${movieObject.imagePath})`}}>
+                    {/* <img
+                        src={movieObject.imagePath}
+                        alt={movieObject.title}
+                    />      */}               
+                </div>
+
                 <h3>{movieObject.title}</h3>
 
                 {
@@ -21,12 +23,13 @@ const WatchItem = ({movieObject, showRating}) => {
 
                 <button
                     onClick={() => setIsFavorite(!isFavorite)}
+                    className='favorite-button'
                 >
                     {
                         isFavorite ?
-                            'Makni iz favorita'
+                            '💙'
                             :
-                            'Dodaj u favorite'
+                            '♡'
                     }
                 </button>
             </article>            

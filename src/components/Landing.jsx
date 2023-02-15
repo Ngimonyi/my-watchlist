@@ -7,7 +7,8 @@ const Landing = () => {
         flexWrap: 'wrap',
         width: 768,
         maxWidth: '100%',
-        margin: '0 auto'
+        margin: '0 auto',
+        padding: '54px 0'
     }
 
     return (

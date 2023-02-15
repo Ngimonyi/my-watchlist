@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <nav className='main-nav'>
+        <nav>
             <ul>
                 {
                     navList.map((navItem, index) => {
