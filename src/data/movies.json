@@ -19,7 +19,7 @@
         "id": 3,
         "title": "Forrest Gump",
         "year": 1994,
-        "isFavorite": false,
+        "isFavorite": true,
         "imagePath": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY67_CR0,0,45,67_AL_.jpg",
         "rating": 8.8
     },

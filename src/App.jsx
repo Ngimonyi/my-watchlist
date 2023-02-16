@@ -7,6 +7,7 @@ import {
   Routes
 } from 'react-router-dom';
 import Favorites from './components/Favorites';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </main>
         <Footer />

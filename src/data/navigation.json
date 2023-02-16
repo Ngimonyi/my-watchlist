@@ -1,14 +1,14 @@
 [
     {
-        "url": "",
+        "url": "/",
         "title": "All movies"
     },
     {
-        "url": "favorites",
+        "url": "/favorites",
         "title": "Favorites"
     },
     {
-        "url": "search",
+        "url": "/search",
         "title": "Search"
     }
 ]
