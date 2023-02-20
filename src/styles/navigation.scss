@@ -26,6 +26,23 @@ header {
                     }
                 }
 
+                a {
+                    &.home-page {
+                        &.notification {
+                            &::before {
+                                content: '';
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background-color: #27295A;
+                                position: absolute;
+                                top: 35px;
+                                right: 28px;
+                            }
+                        }
+                    }
+                }
+
                 &:not(:last-child) {
                     &::after {
                         content: '';

@@ -1,6 +1,4 @@
 import WatchItem from "./WatchItem";
-import movies from '../data/movies.json';
-import { useEffect } from "react";
 import { useState } from "react";
 
 const Favorites = () => {
@@ -12,18 +10,9 @@ const Favorites = () => {
         margin: '0 auto',
         padding: '54px 0'
     }
-    const filteredMovies = movies.filter((movie) => movie.isFavorite)
-    const [number, setNumber] = useState(0)
 
-    useEffect(() => {
-        console.log('Komponenta Favorites se mountala');
-
-        return () => console.log('Komponenta Favorites umrla');
-    }, [])
-
-    useEffect(() => {
-        console.log('Number se promijenio');
-    }, [number])
+    const [localMovies, setLocalMovies] = useState(JSON.parse(localStorage.getItem('movies')) || []);
+    const filteredMovies = localMovies.filter(movie => movie.isFavorite)
 
     return (
         <div style={moviesWrap}>
@@ -34,6 +23,7 @@ const Favorites = () => {
                             movieObject={movie}
                             director="jbfkjbefjkb"
                             key={movie.id}
+                            setLocalMovies={setLocalMovies}
                         />
                     )
                 })
