@@ -1,9 +1,14 @@
+import '../styles/upper-navigation.scss'
+
+
 const UpperNav = () => {
     const logo = <div>My Watchlist</div>
 
     return (
         <>
-            {logo}
+            <div className="upper-navigation">
+                {logo}
+            </div>
         </>
     )
 }

@@ -1,22 +1,50 @@
+import '../styles/watch-item.scss';
 import propTypes from 'prop-types';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-const WatchItem = ({movieObject}) => {
+const WatchItem = ({movieObject, showRating, isSearchResult}) => {
+    const [isFavorite, setIsFavorite] = useState(movieObject.isFavorite);
+
+    // search rezultati se ne bi smjeli moći dodavati u favorite, već samo lokalno spremiti
+    // samo lokalno spremljeni filmovi se mogu dodavati u favorite
+    // filmovi koje želimo dodati, spremamo u localStorage
+
     return (
-        <article>
-            <img
-                src={movieObject.imagePath}
-                alt={movieObject.title}
-            />
-            <h3>{movieObject.title}</h3>
-            <button>
+        <div className="item-wrap">
+            <article className='watch-item'>
+                <div className="img-wrap" style={{fontSize: '24px', backgroundImage: `url(${movieObject.imagePath})`}}>
+                    {/* <img
+                        src={movieObject.imagePath}
+                        alt={movieObject.title}
+                    />      */}
+                </div>
+
+                <h3>{movieObject.title}</h3>
+
                 {
-                    movieObject.isFavorite ?
-                        'Makni iz favorita'
-                        :
-                        'Dodaj u favorite'
+                    showRating && <button>Show rating</button>
                 }
-            </button>
-        </article>
+
+                {
+                    isSearchResult ? 
+                    <button>Add movie</button>
+                    :
+                    <button
+                        onClick={() => setIsFavorite(!isFavorite)}
+                        className='favorite-button'
+                    >
+                        {
+                            isFavorite ?
+                                '💙'
+                                :
+                                '♡'
+                        }
+                    </button>
+                }
+            </article>            
+        </div>
+
     )
 }
 

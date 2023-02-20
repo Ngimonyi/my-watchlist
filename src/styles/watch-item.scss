@@ -1,0 +1,32 @@
+.item-wrap {
+    padding: 0 23px;
+    width: 33.33333%;
+    flex: 0 0 33.333333%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+    .watch-item {
+        border-radius: 8px;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 8px 1px rgba(71, 58, 75, 0.3);
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        h3 {
+            text-align: center;
+        }
+
+        .img-wrap {
+            padding-bottom: 56.25%;
+            background-size: cover;
+        }
+
+        .favorite-button {
+            position: absolute;
+            top: 4px;
+            right: 5px;
+        }
+    }
+}
+

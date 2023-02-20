@@ -1,22 +1,14 @@
 [
     {
-        "url": "",
+        "url": "/",
         "title": "All movies"
     },
     {
-        "url": "favorites",
+        "url": "/favorites",
         "title": "Favorites"
     },
     {
-        "url": "add",
-        "title": "Add"
-    },
-    {
-        "url": "search",
+        "url": "/search",
         "title": "Search"
-    },
-    {
-        "url": "contact",
-        "title": "Contact"
     }
 ]

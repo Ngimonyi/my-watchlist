@@ -1,3 +1,4 @@
+import '../styles/footer.scss';
 import Navigation from "./Navigation";
 
 const Footer = () => {

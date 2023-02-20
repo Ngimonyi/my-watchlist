@@ -6,7 +6,12 @@ import UserImage from "./UserImage";
 import ClassSample from "./ClassSample";
 import Person from "./Person";
 import Student from "./Student";
-import Events from "./Events";
+import ReactStates from "./ReactStates";
+import { useState } from "react";
+import ClanskaIskaznica from "./ClanskaIskaznica";
+import Accordion from "./Accordion";
+import MoviesSearch from "./MoviesSearch";
+import MovieGallery from "./MovieGallery";
 
 const Playground = () => {
     const students = [
@@ -30,6 +35,7 @@ const Playground = () => {
         }
     ]
 
+    const [currentImage, setCurrentImage] = useState(batman)
 
     const introduction = (fullNameString) => {
         alert('Mein Name ist ' + fullNameString);
@@ -37,9 +43,40 @@ const Playground = () => {
 
     return (
         <>
-            <Events />
+            <MovieGallery />
+
+            <br /><br />
+            <hr />
+            
+            <h1>Movies search</h1>
+            <MoviesSearch />
+
+            <br /><br />
+            <hr />
+
+            <h1>Accordions</h1>
+            <Accordion />
+            <Accordion />
+            <Accordion />
+            <Accordion />
+
+            <br /> <br />
+            <hr />
+
+            <ClanskaIskaznica />
 
             <hr />
+
+            <img
+                src={currentImage}
+                alt=""
+                onMouseEnter={() => setCurrentImage(superman)}
+                onMouseLeave={() => setCurrentImage(batman)}
+            />
+
+            <hr />
+
+            <ReactStates />
 
             {
                 students.map((student) => {
